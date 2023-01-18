@@ -88,7 +88,7 @@ function updateTotalCP(arr){
     arr.forEach(element => {
         total += element.cp;
     });
-    document.querySelector('.chosen__totalCP').innerText = total; 
+    document.querySelector('.chosen__totalCP').innerText = 'Total CP: ' + total; 
 }
 function updatePokemons(arr,cardsPalceString){
     let domElement = cardsPalceString === 'available' ? document.querySelector('#available__cards') : document.querySelector('#chosen__cards'); 
