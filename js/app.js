@@ -47,7 +47,7 @@ let chosenPokemons= [];
 update();
 
 
-function returnIdOFDomElement() {
+function Pokemon() {
     let pokemonsCards = document.querySelectorAll('#available__cards .card');
     let chosenCards = document.querySelectorAll('#chosen__cards .card');
     pokemonsCards.forEach(el => {
@@ -71,7 +71,7 @@ function update(){
     updatePokemons(pokemons,'available'); 
     updatePokemons(chosenPokemons,'chosen'); 
     updateTotalCP(chosenPokemons);
-    returnIdOFDomElement();
+    Pokemon();
 }
 function moveArrayToArray(id,arr1,arr2){
     arr1.forEach(el => {
@@ -90,6 +90,7 @@ function updateTotalCP(arr){
     });
     document.querySelector('.chosen__totalCP').innerText = 'Total CP: ' + total; 
 }
+
 function updatePokemons(arr,cardsPalceString){
     let domElement = cardsPalceString === 'available' ? document.querySelector('#available__cards') : document.querySelector('#chosen__cards'); 
         domElement.innerHTML = '';
